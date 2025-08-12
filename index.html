@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Pages with JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Web Pages with JavaScript</h1>
+    </header>
+
+    <main>
+        <!-- Part 1: Event Handling Examples -->
+        <section id="event-handling">
+            <h2>Event Handling Examples</h2>
+            <button id="hoverButton">Hover Over Me!</button>
+            <p id="hoverMessage" class="hidden">Thanks for hovering!</p>
+            
+            <div id="keyPressArea">
+                <p>Press any key while this area is focused:</p>
+                <div id="keyDisplay" tabindex="0">Click here and press a key</div>
+                <p id="pressedKey"></p>
+            </div>
+        </section>
+
+        <!-- Part 2: Interactive Elements -->
+        <section id="interactive-elements">
+            <h2>Interactive Elements</h2>
+            
+            <!-- Light/Dark Mode Toggle -->
+            <div class="feature">
+                <h3>Light/Dark Mode Toggle</h3>
+                <button id="themeToggle">Toggle Theme</button>
+                <p id="themeMessage">Current theme: <span id="currentTheme">Light</span></p>
+            </div>
+            
+            <!-- Counter Game -->
+            <div class="feature">
+                <h3>Counter Game</h3>
+                <p>Count: <span id="counter">0</span></p>
+                <button id="incrementBtn">Increment</button>
+                <button id="decrementBtn">Decrement</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+            
+            <!-- Collapsible FAQ Section -->
+            <div class="feature">
+                <h3>FAQ Section</h3>
+                <div class="faq-item">
+                    <button class="faq-question">What is JavaScript?</button>
+                    <div class="faq-answer hidden">
+                        <p>JavaScript is a programming language that enables interactive web pages. It's an essential part of web applications.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What are event listeners?</button>
+                    <div class="faq-answer hidden">
+                        <p>Event listeners are functions that wait for specific events (like clicks or keypresses) to occur on elements, then execute code in response.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Form Validation -->
+        <section id="form-section">
+            <h2>Form Validation</h2>
+            <form id="userForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <span class="error" id="nameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <span class="error" id="passwordError"></span>
+                </div>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <div id="formSuccess" class="success hidden">
+                <p>Form submitted successfully!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
